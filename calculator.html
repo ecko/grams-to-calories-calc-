@@ -1,0 +1,72 @@
+<html>
+<head>
+	<title>Grams to Calories Calculator</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta charset="utf-8">
+
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="/favicon.ico" rel="icon" type="image/x-icon">
+	
+	<link rel="stylesheet" href="inc/css/toast.css">
+	<link rel="stylesheet" href="inc/css/normalize.css">
+	<!--<link rel="stylesheet" href="inc/css/style.css">-->
+	<script src="inc/js/jquery-1.11.1.min.js"></script>
+	
+</head>
+<body>
+
+<div class="container">
+	<div class="grid">
+	  <div class="grid__col grid__col--3-of-5 grid__col--centered">
+	    <form id="form_calories" name="form_calories" onsubmit="return false;">
+	    	<label> Fat</label> <input type="text" name="grams_fat"><br>
+	    	<label> Protein</label> <input type="text" name="grams_pro"><br>
+	    	<label> Carbs</label> <input type="text" name="grams_carb"><br>
+
+	    	<div><input type="submit" name="" value="Calculate"> <input type="rest" value="Clear"></div>
+	    </form>
+	  </div>
+	  <hr>
+	  <div class="grid__col grid__col--3-of-5 grid__col--push-1-of-5">
+	    Calories <input type="text" id="calories_total">
+	  </div>
+	</div>
+</div>
+
+<script type="text/javascript">
+
+	$('#form_calories').submit(function(e) {
+	//function calculateCalories()
+	//{
+	    // get all the inputs into an array.
+	    //var inputs = $('#form_calories :input');
+
+	    //var values = {};
+	    //$inputs.each(function() {
+	    //    values[this.name] = $(this).val();
+	    //});
+		//console.log('testing');
+		//console.log(inputs);
+
+		var f = form_calories;
+
+		var grams_fat = f.grams_fat.value;
+		var grams_pro = f.grams_pro.value;
+		var grams_carb = f.grams_carb.value;
+
+		//console.log(f.grams_fat, grams_fat);
+
+
+		$('#calories_total').val(grams_fat*9 + grams_pro*4 + grams_carb*4);
+
+		e.preventDefault(); // this will prevent from submitting the form.
+	//}
+	});
+
+	</script>
+
+</body>
+</html>
