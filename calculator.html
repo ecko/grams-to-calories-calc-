@@ -10,12 +10,6 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link href="/favicon.ico" rel="icon" type="image/x-icon">
 	
-	<!--
-	<link rel="stylesheet" href="inc/css/toast.css">
-	<link rel="stylesheet" href="inc/css/normalize.css">-->
-	<!--<link rel="stylesheet" href="inc/css/style.css">-->
-	<!--<script src="inc/js/jquery-1.11.1.min.js"></script>-->
-
 	<!-- Bootstrap -->
 	<!--<link href="css/bootstrap.min.css" rel="stylesheet">-->
 	<link href="/sandbox/resources/bootstrap/3.3.1/bootstrap-paper-theme.min.css" rel="stylesheet">
@@ -33,10 +27,10 @@
 	<div class="container">
 		<ul class="nav nav-tabs">
 		  <li role="presentation" class="active"><a href="#">Grams to Calories</a></li>
-		  <li role="presentation"><a href="#">BMR Calculator</a></li>
+		  <li role="presentation" class="disabled"><a href="#">BMR Calculator</a></li>
 		</ul>
 
-		<form class="form-horizontal" role="form">
+		<form class="form-horizontal" role="form" id="form_calories" onsubmit="return false;">
 		  <div class="form-group">
 			<label class="sr-only" for="grams_fat">Fat (in grams)</label>
 			<label for="grams_fat" class="col-sm-2 control-label">Fat</label>
@@ -61,18 +55,7 @@
 				<span class="input-group-addon">g</span>
 			</div>
 		  </div>
-		  
-		  <!--
-		  <div class="form-group">
-			<div class="col-sm-offset-2 col-sm-10">
-			  <div class="checkbox">
-				<label>
-				  <input type="checkbox"> Remember me
-				</label>
-			  </div>
-			</div>
-		  </div>
-		  -->
+
 		  <div class="form-group">
 			<div class="col-sm-offset-1 col-sm-10">
 			  <button type="submit" class="btn btn-primary">Calculate</button>
@@ -88,21 +71,6 @@
 		</form>
 
 <!--
-		<form class="form-inline">
-  <div class="form-group">
-    <label class="sr-only" for="exampleInputAmount">Amount (in dollars)</label>
-    <div class="input-group">
-      <div class="input-group-addon">$</div>
-      <input type="text" class="form-control" id="exampleInputAmount" placeholder="Amount">
-      <div class="input-group-addon">.00</div>
-    </div>
-  </div>
-  <button type="submit" class="btn btn-primary">Transfer cash</button>
-</form>
-	</div>
-	
--->
-
 	<div class="container">
 		<div class="grid">
 		  <div class="grid__col grid__col--3-of-5 grid__col--centered">
@@ -120,52 +88,15 @@
 		  </div>
 		</div>
 	</div>
+	-->
 
-	<script type="text/javascript">
-
-		$('#form_calories').submit(function(e) {
-		//function calculateCalories()
-		//{
-			// get all the inputs into an array.
-			//var inputs = $('#form_calories :input');
-
-			//var values = {};
-			//$inputs.each(function() {
-			//    values[this.name] = $(this).val();
-			//});
-			//console.log('testing');
-			//console.log(inputs);
-
-	/*
-	to-do: add some stuff for BMR calculator, http://www.calculator.net/calorie-calculator.html
-
-			This Calorie Calculator is based on the Mifflin - St Jeor equation. With this equation, the Basal Metabolic Rate (BMR) is calculated by using the following formula:
-
-	BMR = 10 * weight(kg) + 6.25 * height(cm) - 5 * age(y) + 5         (man)
-	BMR = 10 * weight(kg) + 6.25 * height(cm) - 5 * age(y) - 161     (woman)
-	*/
-
-
-			var f = form_calories;
-
-			var grams_fat = f.grams_fat.value;
-			var grams_pro = f.grams_pro.value;
-			var grams_carb = f.grams_carb.value;
-
-			//console.log(f.grams_fat, grams_fat);
-
-
-			$('#calories_total').val(grams_fat*9 + grams_pro*4 + grams_carb*4);
-
-			e.preventDefault(); // this will prevent from submitting the form.
-		//}
-		});
-
-		</script>
 
 		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 		<script src="/sandbox/resources/jquery/jquery-1.11.1.min.js"></script>
 		<!-- Include all compiled plugins (below), or include individual files as needed -->
 		<script src="/sandbox/resources/bootstrap/3.3.1/bootstrap.min.js"></script>
+
+
+		<script src="inc/js/calc.js"></script>
 	</body>
 </html>
