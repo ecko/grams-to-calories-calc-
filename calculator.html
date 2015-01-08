@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
 <head>
 	<title>Grams to Calories Calculator</title>
@@ -5,15 +6,14 @@
 	<meta charset="utf-8">
 
 	<meta name="keywords" content="">
-	<meta name="description" content="">
+	<meta name="description" content="Calculator to convert fat, protein and carbs in grams to calories">
 	<meta name="author" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<link href="/favicon.ico" rel="icon" type="image/x-icon">
 	
 	<!-- Bootstrap -->
-	<!--<link href="css/bootstrap.min.css" rel="stylesheet">-->
 	<link href="/sandbox/resources/bootstrap/3.3.1/bootstrap-paper-theme.min.css" rel="stylesheet">
-	<!--<link href="http://getbootstrap.com/examples/dashboard/dashboard.css" rel="stylesheet">-->
 
 	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -35,7 +35,7 @@
 			<label class="sr-only" for="grams_fat">Fat (in grams)</label>
 			<label for="grams_fat" class="col-sm-2 control-label">Fat</label>
 			<div class="input-group col-xs-2">
-				<input type="number" class="form-control" id="grams_fat" placeholder="0" data-min="0">
+				<input type="number" class="form-control" id="grams_fat" placeholder="0" data-min="0" min="0">
 				<span class="input-group-addon">g</span>
 			</div>
 		  </div>
@@ -43,7 +43,7 @@
 			<label class="sr-only" for="grams_pro">Protein (in grams)</label>
 			<label for="grams_pro" class="col-sm-2 control-label">Protein</label>
 			<div class="input-group col-xs-2">
-				<input type="number" class="form-control" id="grams_pro" placeholder="0" data-min="0">
+				<input type="number" class="form-control" id="grams_pro" placeholder="0" data-min="0" min="0">
 				<span class="input-group-addon">g</span>
 			</div>
 		  </div>
@@ -51,7 +51,7 @@
 			<label class="sr-only" for="grams_carb">Carbs (in grams)</label>
 			<label for="grams_carb" class="col-sm-2 control-label">Carbs</label>
 			<div class="input-group col-xs-2">
-				<input type="number" class="form-control" id="grams_carb" placeholder="0" data-min="0">
+				<input type="number" class="form-control" id="grams_carb" placeholder="0" data-min="0" min="0">
 				<span class="input-group-addon">g</span>
 			</div>
 		  </div>
@@ -70,25 +70,8 @@
 			</div>
 		</form>
 
-<!--
-	<div class="container">
-		<div class="grid">
-		  <div class="grid__col grid__col--3-of-5 grid__col--centered">
-			<form id="form_calories" name="form_calories" onsubmit="return false;">
-				<label> Fat</label> <input type="text" name="grams_fat"><br>
-				<label> Protein</label> <input type="text" name="grams_pro"><br>
-				<label> Carbs</label> <input type="text" name="grams_carb"><br>
 
-				<div><input type="submit" name="" value="Calculate"> <input type="rest" value="Clear"></div>
-			</form>
-		  </div>
-		  <hr>
-		  <div class="grid__col grid__col--3-of-5 grid__col--push-1-of-5">
-			Calories <input type="text" id="calories_total">
-		  </div>
-		</div>
-	</div>
-	-->
+
 
 
 		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->

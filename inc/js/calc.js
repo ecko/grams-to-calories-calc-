@@ -1,5 +1,5 @@
 $('#form_calories').submit(function(e) {
-	console.log('testing');
+	//console.log('testing');
 		//function calculateCalories()
 		//{
 			// get all the inputs into an array.
@@ -21,18 +21,20 @@ $('#form_calories').submit(function(e) {
 	BMR = 10 * weight(kg) + 6.25 * height(cm) - 5 * age(y) - 161     (woman)
 	*/
 
+	var fat 	= $('#grams_fat').val()*9,
+		protein = $('#grams_pro').val()*4,
+		carbs	= $('#grams_carb').val()*4;
 
-			var f = form_calories;
-
-			var grams_fat = f.grams_fat.value;
-			var grams_pro = f.grams_pro.value;
-			var grams_carb = f.grams_carb.value;
-
-			//console.log(f.grams_fat, grams_fat);
+		//console.log(f.grams_fat, grams_fat);
+	//console.log(fat, protein, carbs);
 
 
-			$('#calories_total').val(grams_fat*9 + grams_pro*4 + grams_carb*4);
+	$('#calories_total').text(fat + protein + carbs);
 
-			e.preventDefault(); // this will prevent from submitting the form.
-		//}
-		});
+	e.preventDefault(); // this will prevent submitting the form.
+});
+
+$('#form_calories').bind("reset", function(e) {
+	// set calculated calories back to zero
+	$('#calories_total').text(0);
+});
